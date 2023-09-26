@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List - powered by HTMX & Flask</title>
+    <script src="https://unpkg.com/htmx.org@1.9.6" integrity="sha384-FhXw7b6AlE/jyjlZH5iHa/tTe9EpJ1Y55RjcgPbjeWMskSxZt1v9qkxLJWNJaGni" crossorigin="anonymous"></script>
+</head>
+<body>
+    <form method="post">
+        <input id="taskInput" name="task" type="text" placeholder="Add Item Here">
+        <button hx-post="/tasks" hx-params="task" hx-target="#taskList" hx-swap="beforeend" hx-trigger="click">Add Task</button>
+        <div id="taskList">
+            <!-- Tasks will populate into this bit -->
+        </div>
+    </form>
+
+</body>
+</html>
