@@ -8,12 +8,13 @@
 </head>
 <body>
     <form method="post">
-        <input id="taskInput" name="task" type="text" placeholder="Add Item Here">
-        <button hx-post="/tasks" hx-params="task" hx-target="#taskList" hx-swap="beforeend" hx-trigger="click">Add Task</button>
-        <div id="taskList">
-            <!-- Tasks will populate into this bit -->
-        </div>
-    </form>
+        <form method="post">
+            <input id="taskInput" name="task" type="text" placeholder="Add Item Here">
+            <button hx-post="/tasks" hx-params="task" hx-target="#taskList" hx-swap="beforeend" hx-trigger="click">Add Task</button>
+        </form>
+        <div id="taskList" hx-get="/tasks" hx-trigger="load">
+            <!-- Tasks will be loaded here -->
+        </div>      
 
 </body>
 </html>

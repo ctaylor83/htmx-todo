@@ -19,3 +19,4 @@ TO DO:
 <li>Delete Task</li>
 <li>Order/Amend priority</li>
 <li>Make the page look fancy (CSS)</li>
+</ol>
